@@ -1,0 +1,3 @@
+include ':turtle_lib'
+include ':app'
+rootProject.name = "Turtle"
