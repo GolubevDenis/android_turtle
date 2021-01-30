@@ -1,7 +1,5 @@
 package com.denis_golubev.turtle_lib.actions.turn
 
-import com.denis_golubev.turtle_lib.Turtle
-import com.denis_golubev.turtle_lib.actions.turn.Left
 import com.denis_golubev.turtle_lib.state.models.Coordinates
 import com.denis_golubev.turtle_lib.state.models.State
 import org.junit.Assert
@@ -11,9 +9,9 @@ class LeftTest : Assert() {
 
     @Test
     fun apply() {
-        val state = State(coordinates = Coordinates(angle = 90f))
+        val state = State(coordinates = Coordinates(heading = 90f))
 
-        val angle1 = Left(50f).apply(state).coordinates.angle
+        val angle1 = Left(50f).apply(state).coordinates.heading
         assertEquals(140f, angle1)
     }
 

@@ -1,6 +1,5 @@
 package com.denis_golubev.turtle_lib.actions.turn
 
-import com.denis_golubev.turtle_lib.Turtle
 import com.denis_golubev.turtle_lib.normalizeDegree
 import com.denis_golubev.turtle_lib.state.models.Coordinates
 import com.denis_golubev.turtle_lib.state.models.State
@@ -19,8 +18,8 @@ class TurnTest : Assert() {
 
     @Test
     fun apply() {
-        val state = State(coordinates = Coordinates(angle = 0f))
-        val angle = turn.apply(state).coordinates.angle
+        val state = State(coordinates = Coordinates(heading = 0f))
+        val angle = turn.apply(state).coordinates.heading
         assertEquals(CALCULATED_DEGREES.normalizeDegree(), angle)
     }
 

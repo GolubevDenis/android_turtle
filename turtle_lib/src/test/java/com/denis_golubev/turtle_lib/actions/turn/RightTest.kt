@@ -9,9 +9,9 @@ class RightTest : Assert() {
 
     @Test
     fun apply() {
-        val state = State(coordinates = Coordinates(angle = 90f))
+        val state = State(coordinates = Coordinates(heading = 90f))
 
-        val angle = Right(50f).apply(state).coordinates.angle
+        val angle = Right(50f).apply(state).coordinates.heading
         assertEquals(40f, angle)
     }
 
